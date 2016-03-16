@@ -1,0 +1,6 @@
+# Remove node modules.
+node_modules/
+
+# Remove CSS map files.
+*.css.map
+
