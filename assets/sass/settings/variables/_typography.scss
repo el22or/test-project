@@ -1,0 +1,59 @@
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+// ===========================
+// Define font-size variables.
+// ===========================
+
+$font-size: (
+  xxxxl:  4,
+  xxxl:   3,
+  xxl:    2,
+  xl:     1.25,
+  l:      1.1,
+  m:      1,
+  s:      0.875,
+  xs:     0.75,
+  xxs:    0.675,
+);
+@function font-size($key) {
+  @return map-get($font-size, $key);
+}
+
+$body-font-size:                          font-size(s)   * $base-font-size;
+$normal-text-font-size:                   font-size(m)   * $base-font-size;
+
+$h1-font-size: font-size(xxl) * $base-font-size;
+$h2-font-size: font-size(xl)  * $base-font-size;
+$h3-font-size: font-size(l)   * $base-font-size;
+$h4-font-size: font-size(m)   * $base-font-size;
+$h5-font-size: font-size(m)   * $base-font-size;
+$h6-font-size: font-size(m)   * $base-font-size;
+
+// =============================
+// Define font-family variables.
+// =============================
+
+$font-family: (
+  // Serif.
+  times_new_roman: '"Times New Roman", Times, Georgia, "DejaVu Serif", serif',
+  times: 'Times, "Times New Roman", Georgia, "DejaVu Serif", serif',
+  georgia: 'Georgia, "Times New Roman", "DejaVu Serif", serif',
+  // Sans serif.
+  verdana: 'Verdana, Tahoma, "DejaVu Sans", sans-serif',
+  tahoma: 'Tahoma, Verdana, "DejaVu Sans", sans-serif',
+  helvetica: 'Helvetica, Arial, "Nimbus Sans L", sans-serif',
+  arial: 'Arial, Helvetica, sans-serif',
+  helvetica_neue_light: '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
+  droid_sans: '"Droid Sans", Helvetica, Arial, sans-serif',
+  // Monospace.
+  courier: '"Courier New", "DejaVu Sans Mono", monospace, sans-serif'
+);
+
+// Base.
+$base-font-family:   font-family(droid_sans); // droid_sans; // The font family set on the html element.
+$body-font-family:         $base-font-family;
+$font-monospace:        font-family(courier);
+
+// Headings.
+$headings-font-family: $base-font-family;

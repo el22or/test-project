@@ -1,0 +1,6 @@
+// Typography functions.
+
+// Font family.
+@function font-family($key) {
+  @return unquote(map-get($font-family, $key));
+}

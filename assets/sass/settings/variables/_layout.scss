@@ -1,0 +1,63 @@
+// Breakpoints.
+$breakpoints: (
+  small:         0px, // Phones, watches, ...
+  narrow:      640px, // Portrait oriented tablets
+  normal:      980px, // Landscape oriented tablets, laptops, smaller desktop screens, ...
+  wide:       1540px  // Large desktop screens, TVs, ...
+);
+@function breakpoint-size($key, $max-width: false) {
+  @if ($max-width) {
+    @return map-get($breakpoints, $key) - 1
+  }
+  @return map-get($breakpoints, $key);
+}
+
+// Site width and limits.
+//$__site-width-tolerance: 40px; // Minimum space on both sides before breakpoint.
+$__site-width-default: 100%;
+//$__site-width-max: breakpoint-size('normal') - $__site-width-tolerance;
+
+$site-width: (
+  default: $__site-width-default,
+  small:   $__site-width-default,
+  narrow:  $__site-width-default,
+  normal:                  940px,
+  wide:                    940px
+);
+// Site width.
+@function site-width($key) {
+  @return map-get($site-width, $key);
+}
+
+// Standard project spaces.
+// Use them for margins, padding, calculations, etc.
+$space-xl:   75px;
+$space-l:    60px;
+$space-m:    35px;
+$space-s:    20px;
+$space-xs:   15px;
+$space-xxs:  10px;
+$space-xxxs:  5px;
+
+// Susy.
+// =================================
+$susy: (
+  global-box-sizing: border-box,
+  columns: 12,
+  gutters: (1/4),
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    clearfix: true
+  )
+);
+
+// Border radius.
+$border-radius-none: 0;
+
+// Header.
+$header-height: 70px;

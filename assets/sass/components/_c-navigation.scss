@@ -1,0 +1,7 @@
+$__component_namespace: '.c-navigation';
+$__black: $black;
+
+#{$__component_namespace} {
+  background-color: rgba($__black, 0.5);
+  box-shadow: 0 2px 5px rgba($__black, 0.5);
+}
