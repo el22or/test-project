@@ -93,6 +93,32 @@ body {
   }
 }
 
+.c-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-header__regions {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c-logo {
+  border-radius: 50%;
+  vertical-align: bottom;
+}
+
+.c-logo__wrapper {
+  margin-right: 35px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  width: 50px;
+}
+
 .c-navigation {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);

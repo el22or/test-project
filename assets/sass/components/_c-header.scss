@@ -1,0 +1,12 @@
+// Header component.
+
+// Component variables.
+$__component_namespace: '.c-header';
+
+#{$__component_namespace} {
+  display: flex;
+
+  &__regions {
+    flex: 1;
+  }
+}
