@@ -5,7 +5,7 @@
 // Requires (dependencies).
 // ========================
 
-var globImporter = require('sass-glob-importer');
+var importOnce   = require('node-sass-import-once');
 var path         = require('path');
 var gulp         = require('gulp');
 var $            = require('gulp-load-plugins')();
@@ -30,12 +30,13 @@ options.theme = {
 };
 
 options.sass = {
-  importer: globImporter(),
+  importer: importOnce,
   includePaths: [
     options.theme.sass,
     options.rootPath.project + 'node_modules/breakpoint-sass/stylesheets',
     options.rootPath.project + 'node_modules/sassy-maps/sass',
-    options.rootPath.project + 'node_modules/support-for/sass'
+    options.rootPath.project + 'node_modules/support-for/sass',
+    options.rootPath.project + 'node_modules/susy/sass'
   ],
   outputStyle: 'expanded'
 };
