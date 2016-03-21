@@ -5,7 +5,8 @@ $__component_namespace: '.c-logo';
 
 // Get global settings for logo size (from settings/variables/layout).
 @if variable-exists('logo-size') {
-  $__c-logo__width: map-get($logo-size, 'width');
+  $__c-logo__height: map-get($logo-size, 'height');
+  $__c-logo__width:  map-get($logo-size, 'width');
 }
 @else {
   @warn "Variable `$logo-size` is not set in `settings/variables/layout`!";
@@ -13,7 +14,11 @@ $__component_namespace: '.c-logo';
 
 #{$__component_namespace} {
   border-radius: 50%;     // Dynamic circle, for any image size.
+  @if variable-exists('__c-logo__height') {
+    max-height: $__c-logo__height;
+  }
   vertical-align: bottom; // Fix line height space at the bottom side.
+  width: auto !important;
 
   &__wrapper {
     margin-right: $space-m;
