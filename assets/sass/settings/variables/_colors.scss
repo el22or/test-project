@@ -1,3 +1,33 @@
-$black: #000;
+/// Imports.
+/// Import helper functions for calculations.
+@import "tools/functions/helpers";
 
-$brand-1: #3F8AD9;
+/// Static colors.
+/// Use them only in this file or for debugging.
+$black:                #000; // Black.
+$blue:                 #00F; // Blue.
+$cyan:                 #0FF; // Cyan.
+$green:                #0F0; // Green.
+$grey: lighten($black, 50%); // Grey.
+$magenta:              #F0F; // Magenta.
+$red:                  #F00; // Red.
+$white:                #FFF; // White.
+$yellow:               #FF0; // Yellow.
+
+/// Project color palette.
+/// Names are taken from http://chir.ag/projects/name-that-color/
+$palette: (
+  emperor:         #535353, // Text
+  havelock-blue:   #3F8AD9, // Blue
+  mine-shaft:      #3B3B3B, // Text (titles) - dark gay
+  scooter:         #41B0DA, // Light blue
+  silver:          #BDBDBD, // Text inverted weak.
+  system-danger:   #F2DEDE,
+  system-info:     #D9EDF7,
+  system-success:  #DFF0D8,
+  system-warning:  #FCF8E3,
+  white:           #FFFFFF, // Text inverted.
+);
+
+/// Base colors.
+$color-transparent: transparent;
