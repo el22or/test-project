@@ -5,6 +5,7 @@ $__component_namespace: '.c-header';
 
 #{$__component_namespace} {
   display: flex;
+  position: relative;
 
   &__regions {
     flex: 1;

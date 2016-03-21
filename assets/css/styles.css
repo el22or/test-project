@@ -98,6 +98,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .c-header__regions {
@@ -109,7 +110,9 @@ body {
 
 .c-logo {
   border-radius: 50%;
+  max-height: 50px;
   vertical-align: bottom;
+  width: auto !important;
 }
 
 .c-logo__wrapper {
@@ -119,10 +122,62 @@ body {
   width: 50px;
 }
 
-.c-navigation {
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+.c-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-navigation__list--level-1::before, .c-navigation__list--level-1::after {
+  content: "";
+  display: table;
+}
+
+.c-navigation__list--level-1::after {
+  clear: both;
+}
+
+@media (min-width: 980px) {
+  .c-navigation__list--level-2\@normal {
+    background-color: #f2f2f2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.07)), color-stop(10px, transparent));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.07) 0%, transparent 10px);
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.07) 0%, transparent 10px);
+    left: 150px;
+    opacity: 0;
+    position: absolute;
+    right: 150px;
+    top: 100%;
+    -webkit-transition: all 0.3s ease 0s, visibility 0s linear 0.3s;
+    transition: all 0.3s ease 0s, visibility 0s linear 0.3s;
+    visibility: hidden;
+  }
+  .c-navigation__list-item:hover > .c-navigation__list--level-2\@normal {
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    visibility: visible;
+  }
+  .c-navigation__list--level-2\@normal::before {
+    content: "";
+    border-color: #FFF transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px 5px 0 5px;
+    height: 0;
+    margin-left: -5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+  }
+}
+
+.c-navigation__list--level-1 > .c-navigation__list-item {
+  float: left;
+}
+
+.c-navigation__list--level-1 > .c-navigation__list-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
