@@ -398,6 +398,7 @@ body {
 }
 
 .c-media-container__header {
+  background-color: #F3F3F3;
   height: 40px;
   line-height: 40px;
   overflow: hidden;
