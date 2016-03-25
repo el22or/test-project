@@ -1,0 +1,29 @@
+// List utilities.
+
+// Utility variables.
+$__utility_namespace: '.u-list';
+$__u-list-height: 0.9166em;
+$__u-list-width: 10px;
+$__u-list-bullet-font-size: 1.25;
+$__u-list-bullet-distance: 2px;
+
+#{$__utility_namespace} {}
+
+// Bullet list.
+#{$__utility_namespace}--has-custom-bullets {
+  list-style: none;
+  padding-left: $__u-list-width + $__u-list-bullet-distance;
+
+  li::before {
+    content: "»";
+    display: inline-block;
+    float: left;
+    font-size: 1.25em;
+    height: $__u-list-height;
+    line-height: 0.9166;
+    margin-left: -($__u-list-width + $__u-list-bullet-distance);
+    text-align: center;
+    vertical-align: text-top;
+    width: $__u-list-width;
+  }
+}

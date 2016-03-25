@@ -1,0 +1,10 @@
+// Header component.
+
+// Component variables.
+$__component_namespace: '.c-bottom';
+$__c-bottom__background-color: get-palette(black-haze);
+
+#{$__component_namespace} {}
+#{$__component_namespace}__wrapper {
+  background-color: $__c-bottom__background-color;
+}

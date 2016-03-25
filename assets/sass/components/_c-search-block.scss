@@ -1,0 +1,60 @@
+// Search block component.
+
+// Component variables.
+$__component_namespace: '.c-search-block';
+$__c-search-block__height: 20px; // Height of header two region.
+$__c-search-block__padding: 5px;
+$__c-search-block-field__background-color: $color-background-inverted-weak;
+$__c-search-block-button-distance-left: 3px;
+$__c-search-block-button-distance-right: 5px;
+
+#{$__component_namespace} {
+  @include clearfix();
+}
+
+// Input field.
+#{$__component_namespace}__field {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: $__c-search-block-field__background-color;
+  border: {
+    radius: $__c-search-block__height / 2;
+    width: 0;
+  }
+  display: inline-block;
+  float: left;
+  height: $__c-search-block__height;
+  line-height: $__c-search-block__height;
+  margin-right: -100%;
+  padding: {
+    left: $__c-search-block__padding;
+    right: $__c-search-block-button-distance-left + $__c-search-block__height + $__c-search-block-button-distance-right;
+  }
+  vertical-align: top;
+  width: 100%;
+}
+
+// Input field.
+#{$__component_namespace}__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba($white, 0.5);
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-size: 0;
+  height: $__c-search-block__height;
+  line-height: 0;
+  margin: {
+    left: -$__c-search-block__height;
+    right: $__c-search-block-button-distance-right;
+  }
+  overflow: hidden;
+  text-indent: $__c-search-block__height + 5px;
+  vertical-align: top;
+  width: $__c-search-block__height;
+}

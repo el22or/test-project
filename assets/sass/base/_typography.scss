@@ -1,0 +1,86 @@
+// Base typography.
+
+html {
+  font: {
+    family: $base-font-family;
+    size: $base-font-size;
+  }
+}
+
+body {
+  color: $color-text;
+  font-size: $body-font-size;
+}
+
+/**
+ * Headings.
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-text-strong;
+  line-height: 1.1;
+  margin: {
+    bottom: 1em;
+    top: 0.5em;
+  }
+
+  &[class*="title"] {
+    margin: {
+      bottom: 0;
+      top: 0;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Paragraphs.
+ */
+p {
+  &:not(:first-child):not(:last-child) {
+    margin: {
+      bottom: 1em;
+      top: 1em;
+    }
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Links.
+ */
+a {
+  color: $color-text-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-text-link-hover;
+    text-decoration: underline;
+  }
+}

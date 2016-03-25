@@ -12,12 +12,12 @@
       <div class="c-logo__wrapper">
         <a href="#" class="c-logo__link" rel="home" title="Lorem Ipsum"><img src="http://placehold.it/100/3F8AD9/ffffff?text=logo" alt="Lorem Ipsum" class="c-logo" width="50px" height="50px"></a>
       </div><!-- /.c-logo__wrapper -->
-      <div class="c-header__regions">
-        <div class="c-header-one">
-          header one region
+      <div class="c-header__regions-wrapper">
+        <div class="c-header__region-one">
+          header one
         </div><!-- /.c-header-top -->
-        <div class="c-header-two">
-          <nav class="c-navigation c-navigation--main">
+        <div class="c-header__region-two">
+          <nav class="c-navigation c-navigation--main l-col-10">
             <ul class="c-navigation__list c-navigation__list--level-1">
               <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a>
                 <ul class="c-navigation__list c-navigation__list--level-2 c-navigation__list--level-2@normal">
@@ -65,21 +65,200 @@
               <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
             </ul>
           </nav>
+          <div class="c-search-block l-col-2-last">
+            <form class="c-search-block__form">
+              <input type="search" class="c-search-block__field" name="search">
+              <input type="submit" class="c-search-block__button">
+            </form>
+          </div>
         </div><!-- /.c-header-top -->
       </div>
     </div><!-- /.c-header -->
   </header>
   <section class="c-top__wrapper">
-    <div class="c-top l-container@wide">top</div>
+    <div class="c-top l-container@wide">
+      <div class="c-slideshow">
+        <picture class="c-slideshow__item">
+          <source srcset="http://placehold.it/1500x400/0E6FC2/FFFFFF?text=1500x400+item+1" media="(min-width: 1500px)">
+          <img class="c-slideshow__image--default" src="http://placehold.it/800x400/0E6FC2/FFFFFF?text=800x400+item+1" alt="Slideshow image">
+        </picture>
+        <!--
+        <picture class="c-slideshow__item">
+          <source srcset="http://placehold.it/1500x400/0E6FC2/FFFFFF?text=1500x400+item+2" media="(min-width: 1500px)">
+          <img class="c-slideshow__image--default" src="http://placehold.it/800x400/0E6FC2/FFFFFF?text=800x400+item+2" alt="Slideshow image">
+        </picture>
+        <picture class="c-slideshow__item">
+          <source srcset="http://placehold.it/1500x400/0E6FC2/FFFFFF?text=1500x400+item+3" media="(min-width: 1500px)">
+          <img class="c-slideshow__image--default" src="http://placehold.it/800x400/0E6FC2/FFFFFF?text=800x400+item+3" alt="Slideshow image">
+        </picture>
+        -->
+      </div>
+    </div>
   </section>
   <main class="c-main__wrapper">
-    <div class="c-main l-container">main</div>
+    <div class="c-main l-container">
+      <div class="l-row">
+        <section class="c-media-container">
+          <div class="c-media-container__header c-media-container__header--has-controls">
+            <h2 class="c-media-container__title">Media container title</h2>
+            <span class="c-media-container__header-controls">
+              <span class="c-controls">
+                <a href="#" title="Previous" class="c-controls__item c-controls__item--prev">Previous</a>
+                <a href="#" title="Next" class="c-controls__item c-controls__item--next">Next</a>
+              </span>
+            </span>
+          </div><!-- /.c-media-container__header -->
+
+          <div class="c-media-container__body">
+            <div class="c-media-container__content">
+              <ul class="c-media-container__list">
+                <li class="c-media-container__list-item"><article>article</article></li>
+                <li class="c-media-container__list-item"><article>article</article></li>
+                <li class="c-media-container__list-item"><article>article</article></li>
+                <li class="c-media-container__list-item"><article>article</article></li>
+              </ul>
+            </div>
+          </div><!-- /.c-media-container__body -->
+        </section>
+      </div><!-- /.l-row -->
+      <div class="l-row">
+        <div class="l-col-8">
+          <section class="c-media-container">
+            <div class="c-media-container__header">
+              <h2 class="c-media-container__title">Media container title</h2>
+            </div><!-- /.c-media-container__header -->
+
+            <div class="c-media-container__body">
+              <div class="c-media-container__content">
+                <article>article</article>
+                <article>article</article>
+                <article>article</article>
+                <article>article</article>
+              </div>
+            </div><!-- /.c-media-container__body -->
+          </section>
+        </div>
+        <div class="l-col-4-last">
+          <section class="c-media-container">
+            <div class="c-media-container__header">
+              <h2 class="c-media-container__title">Media container title</h2>
+            </div><!-- /.c-media-container__header -->
+
+            <div class="c-media-container__body">
+              <div class="c-media-container__content">
+                <ul class="c-media-container__list u-list--has-custom-bullets u-list--arrow-bullets">
+                  <li class="c-media-container__list-item"><a href="#">link</a></li>
+                  <li class="c-media-container__list-item"><a href="#">link</a></li>
+                  <li class="c-media-container__list-item"><a href="#">link</a></li>
+                  <li class="c-media-container__list-item"><a href="#">link</a></li>
+                  <li class="c-media-container__list-item"><a href="#">link</a></li>
+                </ul>
+              </div>
+            </div><!-- /.c-media-container__body -->
+
+            <div class="o-media-container__footer">
+              <a href="#" class="o-media-container__footer-link">Read more</a>
+            </div><!-- /.c-media-container__footer -->
+          </section>
+        </div><!-- /.l-col-4-last -->
+      </div><!-- /.l-row -->
+      <div class="l-row">
+        <picture>
+          <source srcset="http://placehold.it/940x140/CCCCCC/FFFFFF?text=banner" media="(min-width: 960px)">
+          <img class="c-slideshow__image--default" src="http://placehold.it/400x140/CCCCCC/FFFFFF?text=banner" alt="banner">
+        </picture>
+      </div><!-- /.l-row -->
+    </div><!-- /.c-main -->
   </main>
   <section class="c-bottom__wrapper">
-    <div class="c-bottom l-container">bottom</div>
+    <div class="c-bottom l-container">
+      <nav class="c-navigation c-navigation--bottom">
+        <ul class="c-navigation__list c-navigation__list--level-1">
+          <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a>
+            <ul class="c-navigation__list c-navigation__list--level-2">
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a>
+                <ul class="c-navigation__list c-navigation__list--level-3">
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                  <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a>
+            <ul class="c-navigation__list c-navigation__list--level-2">
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+            </ul>
+          </li>
+          <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a>
+            <ul class="c-navigation__list c-navigation__list--level-2">
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+            </ul>
+          </li>
+          <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a>
+            <ul class="c-navigation__list c-navigation__list--level-2">
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+            </ul>
+          </li>
+          <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a>
+            <ul class="c-navigation__list c-navigation__list--level-2">
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+            </ul>
+          </li>
+          <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+          <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+        </ul>
+      </nav>
+    </div>
   </section>
   <footer class="c-footer__wrapper">
-    <div class="c-footer l-container">footer</div>
+    <div class="c-footer l-container">
+      <div class="l-row">
+        <div class="l-col-8">
+          <div class="c-about-block">
+            <h2 class="c-about-block__title">Title</h2>
+            <div class="c-about-block__content">
+              <p>Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+              <p>Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+          </div>
+        </div>
+        <div class="l-col-4-last">
+          <nav class="c-navigation c-navigation--small">
+            <ul class="c-navigation__list u-text--right">
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+              <li class="c-navigation__list-item"><a href="#" class="c-navigation__link">link</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="l-row">
+        <div class="l-col-6 c-footer__partner">
+          <img src="http://placehold.it/100/ffffff/616161?text=logo+1" alt="Parturient" class="c-partner-logo u-image--keep-height" width="50px" height="50px">
+          <img src="http://placehold.it/100/ffffff/616161?text=logo+2" alt="Pharetra" class="c-partner-logo u-image--keep-height" width="50px" height="50px">
+          <span class="u-text--uppercase">Worldwide partner</span>
+        </div>
+        <div class="l-col-6-last u-text--right">
+          <p class="u-text--l">&copy; Lorem Ipsum</p>
+          <p class="u-text--s">* Venenatis Ullamcorper Fringilla Fermentum</p>
+          <p class="u-text--s">** Nullam quis risus eget urna mollis ornare vel eu leo</p>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

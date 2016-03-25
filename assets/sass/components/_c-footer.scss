@@ -1,0 +1,24 @@
+// Header component.
+
+// Component variables.
+$__component_namespace: '.c-footer';
+$__c-footer-background-color: $color-background-inverted;
+$__c-footer__background-color: $color-background-inverted;
+$__c-footer__color: $color-text-inverted;
+
+#{$__component_namespace} {
+  color: $__c-footer__color;
+}
+
+#{$__component_namespace}__wrapper {
+  background-color: $__c-footer__background-color;
+}
+
+#{$__component_namespace}__partner {
+  display: flex;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-right: $space-s;
+  }
+}

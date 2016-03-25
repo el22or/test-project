@@ -1,0 +1,49 @@
+// Logo component.
+
+// Component variables.
+$__component_namespace: '.c-media-container';
+$__c-media-container-header__height: $media-container-header-height;
+$__c-media-container-header-controls-width: ($media-container-header-height * 2) + 1px;
+$__c-media-container-side-padding: $space-xxs;
+
+#{$__component_namespace} {}
+
+#{$__component_namespace}__header {
+  height: $__c-media-container-header__height;
+  line-height: $__c-media-container-header__height;
+  overflow: hidden;
+  padding-left: $__c-media-container-side-padding;
+  &:not(#{$__component_namespace}__header--has-controls) {
+    padding-right: $__c-media-container-side-padding;
+  }
+}
+
+#{$__component_namespace}__header--has-controls {
+  @include clearfix();
+  display: flex;
+}
+
+#{$__component_namespace}__title {
+  flex: 1;
+  font-weight: 300;
+  height: $__c-media-container-header__height;
+  line-height: inherit;
+  margin: {
+    bottom: 0;
+    top: 0;
+  }
+}
+
+#{$__component_namespace}__header-controls {
+  width: $__c-media-container-header-controls-width;
+}
+
+#{$__component_namespace}__body {}
+#{$__component_namespace}__list {
+  margin: {
+    bottom: 0;
+    top: 0;
+  }
+}
+
+#{$__component_namespace}__footer {}

@@ -6,8 +6,22 @@ $__component_namespace: '.c-header';
 #{$__component_namespace} {
   display: flex;
   position: relative;
+}
 
-  &__regions {
-    flex: 1;
-  }
+// Regions wrapper.
+#{$__component_namespace}__regions-wrapper {
+  flex: 1;
+}
+
+// Region one.
+#{$__component_namespace}__region-one {
+  height: 25px;
+  line-height: 25px;
+  margin-bottom: 18px;
+}
+
+// Region two.
+#{$__component_namespace}__region-two {
+  height: 20px;
+  line-height: 20px;
 }

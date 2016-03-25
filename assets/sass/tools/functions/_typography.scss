@@ -4,3 +4,8 @@
 @function font-family($key) {
   @return unquote(map-get($font-family, $key));
 }
+
+// Font size.
+@function font-size($key) {
+  @return map-get($font-size, $key);
+}

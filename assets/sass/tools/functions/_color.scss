@@ -1,0 +1,6 @@
+// Color functions.
+
+// Get palette.
+@function get-palette($key) {
+  @return map-get($palette, $key);
+}

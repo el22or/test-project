@@ -1,0 +1,9 @@
+// Base.
+
+img {
+  &:not(.u-image--keep-height) {
+    height: auto !important; // Use important to override inline height size.
+  }
+  max-width: 100%;
+  vertical-align: bottom;
+}

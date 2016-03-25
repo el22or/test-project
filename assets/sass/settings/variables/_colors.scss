@@ -1,6 +1,6 @@
 /// Imports.
 /// Import helper functions for calculations.
-@import "tools/functions/helpers";
+@import "tools/functions/color";
 
 /// Static colors.
 /// Use them only in this file or for debugging.
@@ -17,17 +17,44 @@ $yellow:               #FF0; // Yellow.
 /// Project color palette.
 /// Names are taken from http://chir.ag/projects/name-that-color/
 $palette: (
-  emperor:         #535353, // Text
-  havelock-blue:   #3F8AD9, // Blue
-  mine-shaft:      #3B3B3B, // Text (titles) - dark gay
-  scooter:         #41B0DA, // Light blue
-  silver:          #BDBDBD, // Text inverted weak.
+  black-haze:      #EBEDED,
+  boulder:         #717171,
+  concrete:        #F3F3F3,
+  dove-gray:       #616161,
+  emperor:         #535353,
+  french-gray:     #C3C3C3,
+  havelock-blue:   #3F8AD9,
+  mine-shaft:      #3B3B3B,
+  mist-gray:       #C9C9C9,
+  scooter:         #41B0DA,
+  silver:          #BDBDBD,
   system-danger:   #F2DEDE,
   system-info:     #D9EDF7,
   system-success:  #DFF0D8,
   system-warning:  #FCF8E3,
-  white:           #FFFFFF, // Text inverted.
+  white:           #FFFFFF,
 );
 
-/// Base colors.
+// Base colors.
 $color-transparent: transparent;
+
+// Brand colors.
+$color-primary:   get-palette(havelock-blue);
+$color-secondary: get-palette(scooter);
+
+// Background colors.
+$color-background:               get-palette(white);
+$color-background-weak:          get-palette(concrete);
+$color-background-inverted:      get-palette(dove-gray);
+$color-background-inverted-weak: get-palette(french-gray);
+
+// Text colors.
+$color-text:               get-palette(emperor);
+$color-text-strong:        get-palette(mine-shaft);
+$color-text-weak:          get-palette(boulder);
+$color-text-inverted:      get-palette(white);
+$color-text-inverted-weak: get-palette(mist-gray);
+$color-text-link:          $color-primary;
+$color-text-link-hover:    $color-secondary;
+$color-text-link-disabled: $color-text-weak;
+

@@ -5,12 +5,6 @@ $breakpoints: (
   normal:      980px, // Landscape oriented tablets, laptops, smaller desktop screens, ...
   wide:       1540px  // Large desktop screens, TVs, ...
 );
-@function breakpoint-size($key, $max-width: false) {
-  @if ($max-width) {
-    @return map-get($breakpoints, $key) - 1
-  }
-  @return map-get($breakpoints, $key);
-}
 
 // Site width and limits.
 //$__site-width-tolerance: 40px; // Minimum space on both sides before breakpoint.
@@ -22,12 +16,9 @@ $site-width: (
   small:   $__site-width-default,
   narrow:  $__site-width-default,
   normal:                  940px,
-  wide:                    940px
+  wide:                    940px,
+  exception:              1500px
 );
-// Site width.
-@function site-width($key) {
-  @return map-get($site-width, $key);
-}
 
 // Standard project spaces.
 // Use them for margins, padding, calculations, etc.
@@ -65,3 +56,6 @@ $logo-size: (
   height: 50px,
   width:  50px
 );
+
+// Media container.
+$media-container-header-height: 40px;

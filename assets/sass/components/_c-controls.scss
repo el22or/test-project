@@ -1,0 +1,30 @@
+// Component (media container) controls.
+
+// Component variables.
+$__component_namespace: '.c-controls';
+$__c-controls-item__width: $media-container-header-height;
+$__c-controls-item__height: $__c-controls-item__width;
+$__c-controls-item-distance: 1px;
+
+#{$__component_namespace} {
+  @include clearfix();
+  //margin: {
+  //  left: -100%;
+  //  right: -(($__c-controls-item__width * 2) + $__c-controls-item-distance);
+  //}
+}
+
+// Controls item.
+#{$__component_namespace}__item {
+  background-color: rgba($black, 0.5);
+  color: transparent;
+  display: block;
+  float: left;
+  font-size: 0;
+  height: $__c-controls-item__height;
+  &:not(:last-child) {
+    margin-right: $__c-controls-item-distance;
+  }
+  text-indent: 110%;
+  width: $__c-controls-item__width;
+}

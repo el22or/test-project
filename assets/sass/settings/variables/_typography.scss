@@ -1,3 +1,6 @@
+// Import typography functions.
+@import "tools/functions/typography";
+
 $base-font-size:   16px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
 
@@ -16,12 +19,9 @@ $font-size: (
   xs:     0.75,
   xxs:    0.675,
 );
-@function font-size($key) {
-  @return map-get($font-size, $key);
-}
 
-$body-font-size:                          font-size(s)   * $base-font-size;
-$normal-text-font-size:                   font-size(m)   * $base-font-size;
+$body-font-size:        font-size(xs) * $base-font-size;
+$normal-text-font-size: font-size(m)  * $base-font-size;
 
 $h1-font-size: font-size(xxl) * $base-font-size;
 $h2-font-size: font-size(xl)  * $base-font-size;
@@ -45,15 +45,15 @@ $font-family: (
   helvetica: 'Helvetica, Arial, "Nimbus Sans L", sans-serif',
   arial: 'Arial, Helvetica, sans-serif',
   helvetica_neue_light: '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
-  droid_sans: '"Droid Sans", Helvetica, Arial, sans-serif',
+  roboto_condensed: '"Roboto Condensed", Helvetica, Arial, sans-serif',
   // Monospace.
   courier: '"Courier New", "DejaVu Sans Mono", monospace, sans-serif'
 );
 
 // Base.
-$base-font-family:   font-family(droid_sans); // droid_sans; // The font family set on the html element.
-$body-font-family:         $base-font-family;
-$font-monospace:        font-family(courier);
+$base-font-family: font-family(roboto_condensed); // The font family set on the html element.
+$body-font-family: $base-font-family;
+$font-monospace:   font-family(courier);
 
 // Headings.
 $headings-font-family: $base-font-family;

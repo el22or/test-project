@@ -1,0 +1,11 @@
+// Main content component.
+
+// Component variables.
+$__component_namespace: '.c-main';
+
+#{$__component_namespace} {
+  padding: {
+    bottom: $space-xl;
+    top: $space-m;
+  }
+}

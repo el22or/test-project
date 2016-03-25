@@ -1,1 +1,14 @@
 // Layout functions.
+
+// Breakpoint size.
+@function breakpoint-size($key, $max-width: false) {
+  @if ($max-width) {
+    @return map-get($breakpoints, $key) - 1
+  }
+  @return map-get($breakpoints, $key);
+}
+
+// Site width.
+@function site-width($key) {
+  @return map-get($site-width, $key);
+}
